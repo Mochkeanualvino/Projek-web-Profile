@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Saya</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      color: #2e8b57;
+      border-bottom: 2px solid #2e8b57;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #246b45;
+    }
+
+    #tahun {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #2e8b57;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2e8b57;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body onload="sambutan()">
+
+  <header>
+    <h1>Halo, Saya Keanu</h1>
+    <p>Web Developer | Pelajar | Gamers</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>👤 Tentang Saya</h2>
+      <p>Sebelumnya Perkenalkan nama saya moch keanu alvino yang biasa dipanggil kenn.Saya lahir di cianjur pada tanggal 08 November 2009,Saya adalah seorang pengembang web yang senang membangun antarmuka yang bersih dan fungsional. Saya suka belajar hal baru yang menurut saya menarik buat di pelajari.</p>
+    </div>
+
+    <div class="section">
+      <h2>🎓 Pendidikan</h2>
+      <ul>
+         <li>SDN Bojong 3</li>
+        <li>SMP Negeri 2 Karangtengah</li>
+        <li>SMK Negeri 1 Cianjur</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🛠️ Keahlian</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Hobi</h2>
+      <ul>
+        <li>Bermain Game 🎮</li>
+        <li>Menonton film dokumenter 🎬</li>
+        <li>Jalan-jalan ke alam 🌿</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📫 Kontak</h2>
+      <p>Email: keanualvino7@gmail.com</p>
+      <p>Instagram: @ken_alvinoo</p>
+    </div>
+
+    <div class="section">
+      <button onclick="tampilkanTahun()">Tampilkan Tahun Ini</button>
+      <div id="tahun"></div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="footerTahun"></span> Keanu. Dibuat dengan ❤️ dan semangat belajar.
+  </footer>
+
+  <script>
+    function sambutan() {
+      alert("Selamat datang di profil saya!");
+      document.getElementById("footerTahun").textContent = new Date().getFullYear();
+    }
+
+    function tampilkanTahun() {
+      const tahun = new Date().getFullYear();
+      document.getElementById("tahun").textContent = "Tahun sekarang adalah: " + tahun;
+    }
+  </script>
+
+</body>
+</html>
